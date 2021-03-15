@@ -9,6 +9,7 @@ before_install:
 script:
   - docker run -e CI=true ankurtomar007/complex-app npm run test
 
+# this code will run after success of my docker file
 after_success:
     - docker build -t ankurtomar007/multi-nginx ./nginx
     - docker build -t ankurtomar007/multi-client ./client
