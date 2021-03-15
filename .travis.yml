@@ -7,4 +7,4 @@ before_install:
   - docker build -t ankurtomar007/complex-app -f ./client/Dockerfile.dev ./client   
 
 scripts:
-  - docker run -e CI=true ankurtomar007/complex-app npm run text
+  - docker run -e CI=true ankurtomar007/complex-app npm run test
