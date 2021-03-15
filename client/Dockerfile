@@ -8,4 +8,6 @@ COPY . .
 
 FROM nginx:latest
 EXPOSE 80
-COPY --from=builder /app/build /var/www/html
+COPY --from=builder /app/build /usr/share/nginx/html
+
+# COPY --from=builder /app/build /var/www/html
